@@ -18,7 +18,7 @@ def stream2count(io)
 		line = io.readline
 		line.downcase!
 
-		line.scan(/(?!#{ARGV[1]})(\b\p{Lo}+3\b)/) do |w|
+		line.scan(/(?!#{ARGV[1]})(\b\p{Lo}+\b)/) do |w|
 			count[w] += 1
 		end
 		
